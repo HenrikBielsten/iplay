@@ -1,14 +1,9 @@
 /* WordPlate */
 @import 'node_modules/swiper/dist/css/swiper';
 
-* {
-
-}
-
 img {
   width: 100%;
 }
-
 
 .home_container {
   width: 100vw;
@@ -32,10 +27,10 @@ img {
       padding-left: 8%;
       margin-bottom: 10%;
 
-        .hero_logo {
-          width: 28%;
-          height: 50%;
-        }
+      .hero_logo {
+        width: 28%;
+        height: 50%;
+      }
     }
     .hero_p {
       font-size: 26px;
@@ -51,70 +46,70 @@ img {
       flex-direction: column;
       justify-content: flex-end;
 
-        .hero_roles {
-          color: #4FDF7B;
-          font-family: Helvetica;
-          font-size: 36px;
-          line-height: 43px;
-          margin: 0;
-          text-align: center;
-          position: absolute;
-          animation-name: roles;
-          animation-duration: 10s;
-          animation-iteration-count: infinite;
-          animation-timing-function: ease-in-out;
-          align-self: center;
-        }
+      .hero_roles {
+        color: #4FDF7B;
+        font-family: Helvetica;
+        font-size: 36px;
+        line-height: 43px;
+        margin: 0;
+        text-align: center;
+        position: absolute;
+        animation-name: roles;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        align-self: center;
+      }
 
-        .hero_athletes {
-        }
+      .hero_athletes {
+      }
 
-        .hero_fans {
+      .hero_fans {
+        opacity: 0;
+        animation-delay: 2s;
+      }
+
+      .hero_coaches {
+        opacity: 0;
+        animation-delay: 4s;
+      }
+
+      .hero_agents {
+        opacity: 0;
+        animation-delay: 6s;
+      }
+
+      .hero_sponsors {
+        opacity: 0;
+        animation-delay: 8s;
+      }
+
+      @keyframes roles {
+        0% {
           opacity: 0;
-          animation-delay: 2s;
+          transform: translateY(-40px);
         }
-
-        .hero_coaches {
+        10% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        20% {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+        30% {
           opacity: 0;
-          animation-delay: 4s;
+          transform: translateY(40px);
         }
-
-        .hero_agents {
+        40% {
           opacity: 0;
-          animation-delay: 6s;
+          transform: translateY(-40px);
         }
-
-        .hero_sponsors {
+        100% {
           opacity: 0;
-          animation-delay: 8s;
+          transform: translateY(-40px);
         }
-
-        @keyframes roles {
-          0% {
-            opacity: 0;
-            transform: translateY(-40px);
-          }
-          10% {
-            opacity: 1;
-            transform: translateY(0px);
-          }
-          20% {
-            opacity: 1;
-            transform: translateY(0px);
-          }
-          30% {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          40% {
-            opacity: 0;
-            transform: translateY(-40px);
-          }
-          100% {
-            opacity: 0;
-            transform: translateY(-40px);
-          }
-        }
+      }
     }
 
     .hero_mockup {
@@ -146,40 +141,40 @@ img {
     }
 
     .swiper-container {
-        width: 100vw;
-        height: 20vh;
+      width: 100vw;
+      height: 20vh;
 
-        .sports_icon {
-          width: 30%;
-          height: 30%;
-          margin-bottom: 8%;
-        }
+      .sports_icon {
+        width: 30%;
+        height: 30%;
+        margin-bottom: 8%;
+      }
 
-        .sports_name {
-          color: white;
-        }
+      .sports_name {
+        color: white;
+      }
 
-        .swiper-slide {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 10%;
-        }
+      .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 10%;
+      }
 
-        .swiper-pagination-bullet-active {
-          background-color: #4FDF7B;
-          transform: scale(1.3);
-          transition: transform .2s ease-in-out;
-        }
+      .swiper-pagination-bullet-active {
+        background-color: #4FDF7B;
+        transform: scale(1.3);
+        transition: transform .2s ease-in-out;
+      }
 
-        .swiper-pagination-bullet {
-          transition: transform .2s ease-in-out;
-        }
+      .swiper-pagination-bullet {
+        transition: transform .2s ease-in-out;
+      }
 
-        .swiper-pagination-bullet:hover {
-          transform: scale(1.3);
-        }
+      .swiper-pagination-bullet:hover {
+        transform: scale(1.3);
+      }
     }
 
     .sports_buttons_div {
@@ -498,8 +493,8 @@ img {
 }
 
 .shadow {
-    -webkit-filter: drop-shadow(3px 3px 3px rgba(151,151,151,0.5));
-            filter: drop-shadow(3px 3px 3px rgba(151,151,151,0.5));
+  -webkit-filter: drop-shadow(3px 3px 3px rgba(151,151,151,0.5));
+  filter: drop-shadow(3px 3px 3px rgba(151,151,151,0.5));
 }
 
 @keyframes social {
@@ -524,14 +519,14 @@ img {
   justify-content: space-around;
   align-items: center;
 
-   p {
-     font-family: "Helvetica Neue";
-     font-size: 34px;
-     font-weight: bold;
-     line-height: 41px;
-     text-align: center;
-     color: #4FDF7B;
-   }
+  p {
+    font-family: "Helvetica Neue";
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 41px;
+    text-align: center;
+    color: #4FDF7B;
+  }
 }
 
 .email_div {
@@ -539,7 +534,7 @@ img {
   flex-direction: row;
   height: 5vh;
 
-   p {
+  p {
     color: white;
   }
 }
@@ -549,7 +544,7 @@ img {
   flex-direction: row;
   height: 5vh;
 
-   p {
+  p {
     color: white;
   }
 }

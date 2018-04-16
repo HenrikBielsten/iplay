@@ -48,6 +48,7 @@ import Swiper from 'swiper';
     });
   });
 
+  // This is to dynamically change the content in the rolas modal pop-up
   $('#roles_modal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
 
@@ -71,40 +72,3 @@ import Swiper from 'swiper';
     modal.find('.pop_up_statement_2').text(statement2)
     modal.find('.pop_up_statement_3').text(statement3)
   });
-
-  function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    // Windows Phone must come first because its UA also contains "Android"
-    if (/windows phone/i.test(userAgent)) {
-      return "Windows Phone";
-    }
-
-    if (/android/i.test(userAgent)) {
-      return "Android";
-    }
-
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-      return "iOS";
-    }
-
-    return "unknown";
-  }
-
-  function DetectAndServe(){
-
-    const get_app = document.querySelectorAll('.get_app');
-
-    if (getMobileOperatingSystem() == "Android") {
-      get_app.href = "https://play.google.com/store/apps/details?id=com.iplay";
-    }
-    if (getMobileOperatingSystem() == "iOS") {
-      get_app.href = "http://www.IOSexample.com";
-    }
-    if (getMobileOperatingSystem() == "Windows Phone") {
-      get_app.href = "http://www.WindowsPhoneexample.com";
-    }
-    if (getMobileOperatingSystem() == "unknown") {
-      get_app.href = "http://www.NowherLandexample.com";}
-    };
