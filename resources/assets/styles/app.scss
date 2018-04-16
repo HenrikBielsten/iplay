@@ -1,0 +1,716 @@
+/* WordPlate */
+@import 'node_modules/swiper/dist/css/swiper';
+
+* {
+
+}
+
+img {
+  width: 100%;
+}
+
+
+.home_container {
+  width: 100vw;
+
+  .hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+
+    .hero_logo_div {
+      width: 100vw;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      padding-left: 8%;
+      margin-bottom: 10%;
+
+        .hero_logo {
+          width: 28%;
+          height: 50%;
+        }
+    }
+    .hero_p {
+      font-size: 26px;
+      font-family: Helvetica;
+      line-height: 29px;
+      color: #FFFFFF;
+      margin-bottom: 0;
+    }
+
+    .hero_text {
+      height: 7%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+        .hero_roles {
+          color: #4FDF7B;
+          font-family: Helvetica;
+          font-size: 36px;
+          line-height: 43px;
+          margin: 0;
+          text-align: center;
+          position: absolute;
+          animation-name: roles;
+          animation-duration: 10s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-in-out;
+          align-self: center;
+        }
+
+        .hero_athletes {
+        }
+
+        .hero_fans {
+          opacity: 0;
+          animation-delay: 2s;
+        }
+
+        .hero_coaches {
+          opacity: 0;
+          animation-delay: 4s;
+        }
+
+        .hero_agents {
+          opacity: 0;
+          animation-delay: 6s;
+        }
+
+        .hero_sponsors {
+          opacity: 0;
+          animation-delay: 8s;
+        }
+
+        @keyframes roles {
+          0% {
+            opacity: 0;
+            transform: translateY(-40px);
+          }
+          10% {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+          20% {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+          30% {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          40% {
+            opacity: 0;
+            transform: translateY(-40px);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(-40px);
+          }
+        }
+    }
+
+    .hero_mockup {
+      width: 120%;
+    }
+  }
+
+  .sports {
+    background-color: white;
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6vh!important;
+
+    .sports_text_div {
+      width: 80vw;
+      margin-top: 5%;
+
+      .sports_text {
+        color: #4FDF7B;
+        font-family: Helvetica;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+
+    .swiper-container {
+        width: 100vw;
+        height: 20vh;
+
+        .sports_icon {
+          width: 30%;
+          height: 30%;
+          margin-bottom: 8%;
+        }
+
+        .sports_name {
+          color: white;
+        }
+
+        .swiper-slide {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 10%;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: #4FDF7B;
+          transform: scale(1.3);
+          transition: transform .2s ease-in-out;
+        }
+
+        .swiper-pagination-bullet {
+          transition: transform .2s ease-in-out;
+        }
+
+        .swiper-pagination-bullet:hover {
+          transform: scale(1.3);
+        }
+    }
+
+    .sports_buttons_div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 35%;
+
+      .sports_button {
+        width: 60vw;
+        height: 9vh;
+        background-color: #4FDF7B;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: skewX(-20deg);
+        box-shadow: 0 2px 3px 0 rgba(151,151,151,0.5);
+        transition: all 0.15s ease-in-out;
+      }
+
+      .sports_button:hover {
+        background-color: #4FCF7B;
+        width: 63vw;
+        height: 9vh;
+        box-shadow: 0 4px 5px 0 rgba(151,151,151,0.5);
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .sports_button p {
+        color: white;
+        font-family: Helvetica;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 24px;
+        transform: skewX(20deg);
+        margin: 0!important;
+      }
+
+      .sports_button:hover p {
+
+      }
+    }
+  }
+
+  .roles {
+    background-color: #4FDF7B;
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+    padding: 2%!important;
+
+    .role {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      height: 30%;
+      margin: 4%;
+
+      img {
+        height: 80%;
+      }
+
+      p {
+        font-family: "Helvetica Neue";
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 45px;
+        text-align: center;
+        color: white;
+        margin: 0;
+      }
+    }
+  }
+
+  .super_users {
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    justify-content: center;
+
+    .super_users_header {
+      color: white;
+      height: 15%;
+      text-align: center;
+      font-size: 23px;
+    }
+  }
+}
+
+.user_img {
+  width: 130px;
+  height: 130px;
+  border-radius: 200px;
+}
+
+.user_quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.swiper-background {
+  background-color: #353535;
+  height: 25vh;
+}
+
+.super-container {
+  height: 40vh!important;
+}
+
+.get_in_touch {
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6vh !important;
+
+  .sports_buttons_div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 60%;
+
+    .sports_button {
+      width: 60vw;
+      height: 9vh;
+      background-color: #4FDF7B;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: skewX(-20deg);
+      box-shadow: 0 2px 3px 0 rgba(151,151,151,0.5);
+      transition: all 0.15s ease-in-out;
+    }
+
+    .sports_button:hover {
+      background-color: #4FCF7B;
+      width: 63vw;
+      box-shadow: 0 4px 5px 0 rgba(151,151,151,0.5);
+      cursor: pointer;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .sports_button p {
+      color: white;
+      font-family: Helvetica;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+      transform: skewX(20deg);
+      margin: 0!important;
+    }
+
+    .sports_button:hover p {
+    }
+  }
+
+  .get_in_touch_button {
+    width: 60vw;
+    height: 9vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skewX(-20deg);
+    box-shadow: 0 2px 3px 0 rgba(151,151,151,0.5);
+    transition: all 0.15s ease-in-out;
+    border: 3px solid #4FDF7B;
+  }
+
+  .get_in_touch_button:hover {
+    width: 63vw;
+    box-shadow: 0 4px 5px 0 rgba(151,151,151,0.5);
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .get_in_touch_button p {
+    color: #4FDF7B;
+    font-family: Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    transform: skewX(20deg);
+    margin: 0!important;
+  }
+
+  .get_in_touch_button:hover p {
+  }
+}
+
+.footer {
+  width: 100vw;
+  height: 60vh;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 5%;
+
+  .adress_container {
+    width: inherit;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 8%;
+
+    p {
+      color: white;
+      font-family: "Helvetica Neue";	font-size: 16px;	line-height: 18px;
+    }
+  }
+
+  .contact {
+    width: inherit;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 8%;
+
+    p {
+      color: white;
+      font-family: "Helvetica Neue";	font-size: 16px;	line-height: 18px;
+    }
+  }
+
+  .socials {
+    width: inherit;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 8%;
+
+    ul {
+      width: inherit;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        height: 7vw;
+        width: 7vw;
+        transition: all .3s ease-in-out;
+
+        a {
+          width: 100%;
+          height: 100%;
+
+          img {
+            height: 100%;
+            width: 100%;
+            transition: all .3s ease-in-out;
+          }
+        }
+      }
+      li:hover {
+        animation-name: social;
+        animation-duration: 0.7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out
+      }
+    }
+  }
+
+  .copyright {
+    width: inherit;
+    height: 10%;
+    text-align: center;
+    color: #ABABAB;
+    font-family: "Helvetica Neue";	font-size: 16px;	line-height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.shadow {
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(151,151,151,0.5));
+            filter: drop-shadow(3px 3px 3px rgba(151,151,151,0.5));
+}
+
+@keyframes social {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.3);
+  }
+}
+
+.get_in_touch_modal_background {
+  background-color: #353535;
+}
+
+.get_in_touch_header {
+  height: 6%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+   p {
+     font-family: "Helvetica Neue";
+     font-size: 34px;
+     font-weight: bold;
+     line-height: 41px;
+     text-align: center;
+     color: #4FDF7B;
+   }
+}
+
+.email_div {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+
+   p {
+    color: white;
+  }
+}
+
+.phone_div {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+
+   p {
+    color: white;
+  }
+}
+
+.pop_up_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit_button {
+  width: 60vw;
+  height: 7vh;
+  background-color: #4FDF7B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: skewX(-20deg);
+  box-shadow: 0 2px 3px 0 rgba(151,151,151,0.5);
+  transition: all 0.15s ease-in-out;
+}
+
+.submit_button:hover {
+  background-color: #4FCF7B;
+  width: 63vw;
+  box-shadow: 0 4px 5px 0 rgba(151,151,151,0.5);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.submit_button p {
+  color: white;
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  transform: skewX(20deg);
+  margin: 0!important;
+}
+
+.submit_button:hover p {
+}
+
+.modal-dialog-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roles_modal_background {
+  height: 50vh;
+  width: 85vw;
+  padding-bottom: 3vh;
+  background-color: #4FDF7B;
+}
+
+.roles-modal-body {
+  padding-top: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0;
+}
+
+.modal-padding {
+  padding-bottom: 3vh;
+}
+
+.modal_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 45px;
+    margin-bottom: 0;
+  }
+}
+
+.pop_up_line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  img {
+    width: 10vw;
+    height: 10vw;
+    margin-right: 5vw;
+  }
+
+  p {
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 0;
+  }
+}
+
+.pop_up_image {
+  width: 20vw;
+  height: 20vw;
+}
+
+.pop_up p {
+  color: white;
+  font-family: "Helvetica Neue";
+}
+
+.subscribe_text {
+  text-align: center;
+  color: white;
+  font-family: "Helvetica Neue";
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: normal;
+  text-shadow: 0 0 0;
+  opacity: 1;
+
+  span {
+    color: white;
+    font-family: "Helvetica Neue";
+    padding: 0vw 3vw;
+    font-size: 30px;
+  }
+}
+
+.contact_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+
+  img {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 3vw;
+  }
+
+  p {
+    color: white;
+    margin: 0;
+  }
+}
+
+.pop_up_footer {
+  margin-top: 3vh;
+}
