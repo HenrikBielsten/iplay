@@ -5,116 +5,116 @@
 <!-- Here we start a loop to be able to get all the custom fields from WP -->
 <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
 
-        <div class="hero col-md-12 p-0 m-0" style="background-image: url('<?php the_field('hero_image')['url'] ?>');">
+    <div class="hero col-md-12 p-0 m-0" style="background-image: url('<?php the_field('hero_image')['url'] ?>');">
 
-            <div class="hero_logo_div row">
-                <img class="hero_logo" src="<?php the_field('hero_logo')['url'] ?>" alt="">
-            </div>
-
-            <p class="hero_p"><?php the_field('hero_text') ?></p>
-            <div class="hero_text">
-
-                <p class="hero_roles hero_athletes"><?php the_field('athletes') ?></p>
-                <p class="hero_roles hero_coaches"><?php the_field('coaches') ?></p>
-                <p class="hero_roles hero_fans"><?php the_field('fans') ?></p>
-                <p class="hero_roles hero_agents"><?php the_field('agents') ?></p>
-                <p class="hero_roles hero_sponsors"><?php the_field('sponsors') ?></p>
-
-            </div> <!-- End hero text -->
-
-            <img class="hero_mockup" src="<?php the_field('hero_mockup')['url'] ?>" alt="">
-
-        </div>  <!-- End Hero -->
-
-        <div class="sports col-md-12 p-0 m-0">
-
-            <!-- Slider main container -->
-            <div class="swiper-container swiper-background" data-per-view="3" data-delay="1800">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-
-                    <!-- This starts a loop so that we can get all the custom post types and the custom fields attached to them -->
-                    <?php $args = array(
-                        'post_type' => 'sports',
-                        'posts_per_page' => -1,
-                    ); ?>
-
-                    <?php $productLoop = new WP_Query($args); ?>
-                    <?php if ( $productLoop->have_posts() ) : while ( $productLoop->have_posts() ) : $productLoop->the_post(); ?>
-
-                        <?php $icon = get_field('icon'); ?>
-                        <?php $name = strtoupper(get_field('name')); ?>
-
-                        <div class="swiper-slide">
-                            <img class="sports_icon" src="<?php echo $icon ?>" alt="">
-                            <p class="sports_name"><?php echo $name ?></p>
-                        </div>
-
-                    <?php endwhile; ?>
-                <?php endif; ?>
-
-                <?php wp_reset_postdata(); ?>
-
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-        </div> <!-- End swiper -->
-
-        <div class="sports_text_div">
-            <p class="sports_text"><?php the_field('sports_text') ?></p>
+        <div class="hero_logo_div row">
+            <img class="hero_logo" src="<?php the_field('hero_logo')['url'] ?>" alt="">
         </div>
 
-        <div class="sports_buttons_div">
+        <p class="hero_p"><?php the_field('hero_text') ?></p>
+        <div class="hero_text">
 
-            <a><div class="get_app sports_button"><p>GET THE APP</p></div></a>
+            <p class="hero_roles hero_athletes"><?php the_field('athletes') ?></p>
+            <p class="hero_roles hero_coaches"><?php the_field('coaches') ?></p>
+            <p class="hero_roles hero_fans"><?php the_field('fans') ?></p>
+            <p class="hero_roles hero_agents"><?php the_field('agents') ?></p>
+            <p class="hero_roles hero_sponsors"><?php the_field('sponsors') ?></p>
 
-            <a><div class="sports_button" data-toggle="modal" data-target="#subscribe_modal"><p>SUBSCRIBE</p></div></a>
+        </div> <!-- End hero text -->
+
+        <img class="hero_mockup" src="<?php the_field('hero_mockup')['url'] ?>" alt="">
+
+    </div>  <!-- End Hero -->
+
+    <div class="sports col-md-12 p-0 m-0">
+
+        <!-- Slider main container -->
+        <div class="swiper-container swiper-background" data-per-view="3" data-delay="1800">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- This starts a loop so that we can get all the custom post types and the custom fields attached to them -->
+                <?php $args = array(
+                    'post_type' => 'sports',
+                    'posts_per_page' => -1,
+                ); ?>
+
+                <?php $productLoop = new WP_Query($args); ?>
+                <?php if ( $productLoop->have_posts() ) : while ( $productLoop->have_posts() ) : $productLoop->the_post(); ?>
+
+                    <?php $icon = get_field('icon'); ?>
+                    <?php $name = strtoupper(get_field('name')); ?>
+
+                    <div class="swiper-slide">
+                        <img class="sports_icon" src="<?php echo $icon ?>" alt="">
+                        <p class="sports_name"><?php echo $name ?></p>
+                    </div>
+
+                <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php wp_reset_postdata(); ?>
 
         </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-    </div> <!-- End Sports -->
+    </div> <!-- End swiper -->
 
-    <div class="roles col-md-12 p-0 m-0">
+    <div class="sports_text_div">
+        <p class="sports_text"><?php the_field('sports_text') ?></p>
+    </div>
 
-        <!-- This starts a loop so that we can get all the custom post types and the custom fields attached to them -->
-        <?php $args = array(
-            'post_type' => 'roles',
-            'posts_per_page' => -1,
-        ); ?>
+    <div class="sports_buttons_div">
 
-        <?php $productLoop = new WP_Query($args); ?>
-        <?php if ( $productLoop->have_posts() ) : while ( $productLoop->have_posts() ) : $productLoop->the_post(); ?>
+        <a><div class="get_app sports_button"><p>GET THE APP</p></div></a>
 
-            <?php $image = get_field('image'); ?>
-            <?php $name = strtoupper(get_field('name')); ?>
-            <?php $icon_1 = get_field('icon_1'); ?>
-            <?php $icon_2 = get_field('icon_2'); ?>
-            <?php $icon_3 = get_field('icon_3'); ?>
-            <?php $statement_1 = get_field('statement_1'); ?>
-            <?php $statement_2 = get_field('statement_2'); ?>
-            <?php $statement_3 = get_field('statement_3'); ?>
+        <a><div class="sports_button" data-toggle="modal" data-target="#subscribe_modal"><p>SUBSCRIBE</p></div></a>
 
-            <div class="role" data-toggle="modal" data-target="#roles_modal"
-            data-name="<?php echo $name ?>"
-            data-image="<?php echo $image ?>"
-            data-icon1="<?php echo $icon_1 ?>"
-            data-icon2="<?php echo $icon_2 ?>"
-            data-icon3="<?php echo $icon_3 ?>"
-            data-statement1="<?php echo $statement_1 ?>"
-            data-statement2="<?php echo $statement_2 ?>"
-            data-statement3="<?php echo $statement_3 ?>"
-            >
-            <img src="<?php echo $image ?>" class="shadow">
-            <p><?php echo $name ?></p>
+    </div>
 
-        <?php endwhile; ?>
-    <?php endif; ?>
+</div> <!-- End Sports -->
 
-    <?php wp_reset_postdata(); ?>
+<div class="roles col-md-12 p-0 m-0">
 
-</div> <!-- End roles -->
+    <!-- This starts a loop so that we can get all the custom post types and the custom fields attached to them -->
+    <?php $args = array(
+        'post_type' => 'roles',
+        'posts_per_page' => -1,
+    ); ?>
 
+    <?php $productLoop = new WP_Query($args); ?>
+    <?php if ( $productLoop->have_posts() ) : while ( $productLoop->have_posts() ) : $productLoop->the_post(); ?>
+
+        <?php $image = get_field('image'); ?>
+        <?php $name = strtoupper(get_field('name')); ?>
+        <?php $icon_1 = get_field('icon_1'); ?>
+        <?php $icon_2 = get_field('icon_2'); ?>
+        <?php $icon_3 = get_field('icon_3'); ?>
+        <?php $statement_1 = get_field('statement_1'); ?>
+        <?php $statement_2 = get_field('statement_2'); ?>
+        <?php $statement_3 = get_field('statement_3'); ?>
+
+        <div class="role" data-toggle="modal" data-target="#roles_modal"
+        data-name="<?php echo $name ?>"
+        data-image="<?php echo $image ?>"
+        data-icon1="<?php echo $icon_1 ?>"
+        data-icon2="<?php echo $icon_2 ?>"
+        data-icon3="<?php echo $icon_3 ?>"
+        data-statement1="<?php echo $statement_1 ?>"
+        data-statement2="<?php echo $statement_2 ?>"
+        data-statement3="<?php echo $statement_3 ?>"
+        >
+        <img src="<?php echo $image ?>" class="shadow">
+        <p><?php echo $name ?></p>
+
+
+    </div> <!-- End roles -->
+
+<?php endwhile; ?>
+<?php endif; ?>
+
+<?php wp_reset_postdata(); ?>
 
 <!-- This part shows up as a pop-up when you press one of the roles -->
 <div class="modal fade" id="roles_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -157,6 +157,7 @@
         <div class="swiper-wrapper">
 
             <!-- This starts a loop so that we can get all the custom post types and the custom fields attached to them -->
+
             <?php $args = array(
                 'post_type' => 'super_users',
                 'posts_per_page' => -1,
