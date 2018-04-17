@@ -5,7 +5,7 @@
 <!-- Here we start a loop to be able to get all the custom fields from WP -->
 <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
 
-    <div class="hero col-md-12 p-0 m-0" style="background-image: url('<?php the_field('hero_image')['url'] ?>');">
+    <div class="hero col-md-12 p-0 m-0" style="background-image: url('<?php the_field('hero_image')['url'] ?>'); background-attachment: fixed;">
 
         <div class="hero_logo_div row">
             <img class="hero_logo" src="<?php the_field('hero_logo')['url'] ?>" alt="">
@@ -147,7 +147,7 @@
 
 </div> <!-- End Roles -->
 
-<div class="super_users sports col-md-12 p-0 m-0" style="background-image: url('<?php the_field('super_users_background')['url'] ?>');">
+<div class="super_users sports col-md-12 p-0 m-0" style="background-image: url('<?php the_field('super_users_background')['url'] ?>'); background-attachment: fixed;">
 
     <p class="super_users_header"><?php the_field('super_users_header') ?></p>
 
